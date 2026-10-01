@@ -1,0 +1,23 @@
+# build output
+obj/
+bin/
+BuildZip/
+*.user
+.vs/
+.idea/
+Jukebox/BuildInfo.g.cs
+
+# nothing from the game or anyone else goes in the repo
+*.dll
+*.pdb
+*.wav
+*.ogg
+*.mp3
+*.flac
+*.pak
+*.es3
+*.png
+*.jpg
+decompiled/
+Game Code/
+graphify-out/

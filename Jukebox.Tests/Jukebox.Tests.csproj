@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Pure-logic tests. Nothing here touches Unity, Photon or the game: the types under test take
+       their text, their file names and the room's state as arguments. -->
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>12</LangVersion>
+    <Nullable>enable</Nullable>
+    <AssemblyName>Jukebox.Tests</AssemblyName>
+    <RootNamespace>Jukebox.Tests</RootNamespace>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- SkipPackageMod keeps a test run from restaging BuildZip; GalePluginsDir keeps the mod DLL
+         this build produces out of the live Gale profile. -->
+    <ProjectReference Include="../Jukebox/Jukebox.csproj"
+                      AdditionalProperties="SkipPackageMod=true;GalePluginsDir=$(MSBuildThisFileDirectory)obj/modref" />
+  </ItemGroup>
+
+</Project>

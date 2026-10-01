@@ -1,0 +1,10 @@
+{
+  "name": "Jukebox",
+  "version_number": "1.0.0",
+  "website_url": "https://github.com/VirtualPixel/Jukebox",
+  "description": "Custom sounds for R.E.P.O. Your own sound effects on jump, hurt, death and every other action, a set per Wardrobe outfit. Plays through your voice so everyone hears it. Soundboard hotkeys and stream deck support.",
+  "dependencies": [
+    "BepInEx-BepInExPack-5.4.2305",
+    "Vippy-Wardrobe-1.0.0"
+  ]
+}
